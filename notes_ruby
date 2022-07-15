@@ -1,0 +1,10 @@
+# install and launch rubyn(using step 2 in https://beautifuljekyll.com/getstarted/#install-steps-hard)
+sudo apt-get install ruby-full
+sudo gem install bundler jekyll
+#install modules for config
+bundle install
+#start server
+bundle exec jekyll serve --host=192.168.0.10
+
+
+
