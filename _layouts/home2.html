@@ -6,7 +6,7 @@ layout: page
 {% assign posts = paginator.posts | default: site.posts %}
 {% assign openrow = false %}
 {% assign closerow = false %}
-{% assign maxcol = 3 %}
+{% assign maxcol = site.maxcols | default: 3 %}
 
 <div class="container">
     
@@ -43,7 +43,7 @@ layout: page
       {% if thumbnail != "" %}
       <div class="post-image post-image-small">
         <a href="{{ post.url | absolute_url }}" aria-label="Thumbnail">
-          <img src="{{ thumbnail | absolute_url }}" alt="Post thumbnail">
+          <img src="{{ thumbnail | absolute_url }}" alt="{{ post.title }}" title="{{ post.title }}">
         </a>
       </div>
       {% endif %}
